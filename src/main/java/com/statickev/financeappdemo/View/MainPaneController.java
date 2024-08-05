@@ -4,6 +4,7 @@ import javafx.animation.Interpolator;
 import javafx.animation.TranslateTransition;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -14,11 +15,16 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
 public class MainPaneController {
+    @FXML
+    public AnchorPane mainPane;
+    @FXML
+    public Pane contentPane;
     @FXML
     public Pane navigationDrawer;
     @FXML
@@ -29,7 +35,6 @@ public class MainPaneController {
     public ImageView icon_dashboard, icon_profile, icon_income, icon_expenses, icon_analytics;
     @FXML
     public Pane navButton_dashboard, navButton_profile, navButton_income, navButton_expenses, navButton_analytics;
-    public AnchorPane mainPane;
 
     Map<String, String> colorPalette = Map.of(
             "Espresso", "#1a120b",
@@ -86,6 +91,8 @@ public class MainPaneController {
                 "expenses", label_expenses,
                 "analytics", label_analytics
         );
+
+        loadView("dashboard");
     }
 
     public void drawNavigationDrawer() {
@@ -149,7 +156,10 @@ public class MainPaneController {
         Node sender = (Node) event.getSource();
 
         for (String option : menuIsOpen.keySet()) {
-            if (sender.getId().contains(option)) menuIsOpen.replace(option, true);
+            if (sender.getId().contains(option)) {
+                menuIsOpen.replace(option, true);
+                loadView(option);
+            }
             else menuIsOpen.replace(option, false);
         }
 
@@ -161,6 +171,19 @@ public class MainPaneController {
                         drawerLabels.get(option)
                 );
             }
+        }
+    }
+
+    private void loadView(String viewName) {
+        String path = "/com/statickev/financeappdemo/" + viewName + "-view.fxml";
+
+        try {
+            Pane paneToLoad = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(path)));
+            contentPane.getChildren().clear();
+            contentPane.getChildren().add(paneToLoad);
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 }
