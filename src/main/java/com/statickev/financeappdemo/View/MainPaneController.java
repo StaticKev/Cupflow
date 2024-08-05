@@ -1,4 +1,4 @@
-package com.statickev.financeappdemo;
+package com.statickev.financeappdemo.View;
 
 import javafx.animation.Interpolator;
 import javafx.animation.TranslateTransition;
@@ -9,7 +9,9 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import java.util.HashMap;
@@ -27,13 +29,15 @@ public class MainPaneController {
     public ImageView icon_dashboard, icon_profile, icon_income, icon_expenses, icon_analytics;
     @FXML
     public Pane navButton_dashboard, navButton_profile, navButton_income, navButton_expenses, navButton_analytics;
+    public AnchorPane mainPane;
 
     Map<String, String> colorPalette = Map.of(
-            "Espresso", "#1A120B",
-            "Mocha", "#3C2A21",
-            "Latte", "#D5CEA3",
-            "Cream", "#E5E5CB"
-            );
+            "Espresso", "#1a120b",
+            "Mocha", "#3c2a21",
+            "Latte", "#d5c7a3",
+            "Cream", "#e5decb",
+            "Light Caramel", "#d4a339"
+    );
     Map<String, Boolean> menuIsOpen = new HashMap<>(Map.of(
             "dashboard", true,
             "profile", false,
@@ -45,6 +49,7 @@ public class MainPaneController {
     Map<String, Label> drawerLabels;
 
     public void initialize() {
+        mainPane.setStyle("-fx-background-color: " + colorPalette.get("Cream"));
         navigationDrawer.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
         navigationBar.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
         label_dashboard.setStyle("-fx-background-color: " + colorPalette.get("Mocha"));
@@ -52,6 +57,11 @@ public class MainPaneController {
         label_income.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
         label_expenses.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
         label_analytics.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
+        label_dashboard.setTextFill(Color.web(colorPalette.get("Cream")));
+        label_profile.setTextFill(Color.web(colorPalette.get("Cream")));
+        label_income.setTextFill(Color.web(colorPalette.get("Cream")));
+        label_expenses.setTextFill(Color.web(colorPalette.get("Cream")));
+        label_analytics.setTextFill(Color.web(colorPalette.get("Cream")));
         navButton_dashboard.setStyle("-fx-background-color: " + colorPalette.get("Mocha"));
         navButton_profile.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
         navButton_income.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));

@@ -7,95 +7,99 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171"
+<AnchorPane fx:id="mainPane"
+            fx:controller="com.statickev.financeappdemo.View.MainPaneController"
+            prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171"
             style="-fx-background-color: #E5E5CB;"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.statickev.financeappdemo.MainPaneController">
-    <Pane fx:id="navigationDrawer" layoutX="53.0" prefHeight="600.0" prefWidth="140.0"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <Pane fx:id="navigationDrawer"
+          layoutX="53.0"
+          prefHeight="600.0"
+          prefWidth="140.0"
           translateX="-140"
-          onMouseEntered="#drawNavigationDrawer"
-          onMouseExited="#hideNavigationDrawer">
-        <Label fx:id="label_dashboard" layoutY="167.0" prefHeight="53.0" prefWidth="140.0"
+          onMouseEntered="#drawNavigationDrawer" onMouseExited="#hideNavigationDrawer">
+        <Label fx:id="label_dashboard"
+               layoutY="167.0" prefHeight="53.0" prefWidth="140.0"
                text="  Dashboard" textAlignment="JUSTIFY" textFill="WHITE"
-               onMouseEntered="#onMouseHover"
-               onMouseExited="#onMouseHover">
+               onMouseEntered="#onMouseHover" onMouseExited="#onMouseHover">
             <font>
                 <Font name="Arial Black" size="14.0"/>
             </font>
         </Label>
-        <Label fx:id="label_profile" layoutY="220.0" prefHeight="53.0" prefWidth="140.0"
+        <Label fx:id="label_profile"
+               layoutY="220.0" prefHeight="53.0" prefWidth="140.0"
                text="  Profile" textAlignment="JUSTIFY" textFill="WHITE"
-               onMouseEntered="#onMouseHover"
-               onMouseExited="#onMouseHover">
+               onMouseEntered="#onMouseHover" onMouseExited="#onMouseHover">
             <font>
                 <Font name="Arial Black" size="14.0"/>
             </font>
         </Label>
-        <Label fx:id="label_income" layoutY="273.0" prefHeight="53.0" prefWidth="140.0"
+        <Label fx:id="label_income"
+               layoutY="273.0" prefHeight="53.0" prefWidth="140.0"
                text="  My Income" textAlignment="JUSTIFY" textFill="WHITE"
-               onMouseEntered="#onMouseHover"
-               onMouseExited="#onMouseHover">
+               onMouseEntered="#onMouseHover" onMouseExited="#onMouseHover">
             <font>
                 <Font name="Arial Black" size="14.0"/>
             </font>
         </Label>
-        <Label fx:id="label_expenses" layoutY="326.0" prefHeight="53.0" prefWidth="140.0"
+        <Label fx:id="label_expenses"
+               layoutY="326.0" prefHeight="53.0" prefWidth="140.0"
                text="  My Expenses" textAlignment="JUSTIFY" textFill="WHITE"
-               onMouseEntered="#onMouseHover"
-               onMouseExited="#onMouseHover">
+               onMouseEntered="#onMouseHover" onMouseExited="#onMouseHover">
             <font>
                 <Font name="Arial Black" size="14.0"/>
             </font>
         </Label>
-        <Label fx:id="label_analytics" layoutY="379.0" prefHeight="53.0" prefWidth="140.0"
+        <Label fx:id="label_analytics"
+               layoutY="379.0" prefHeight="53.0" prefWidth="140.0"
                text="  Analytics" textAlignment="JUSTIFY" textFill="WHITE"
-               onMouseEntered="#onMouseHover"
-               onMouseExited="#onMouseHover">
+               onMouseEntered="#onMouseHover" onMouseExited="#onMouseHover">
             <font>
                 <Font name="Arial Black" size="14.0"/>
             </font>
         </Label>
     </Pane>
-    <Pane fx:id="navigationBar" prefHeight="600.0" prefWidth="53.0"
-          onMouseEntered="#drawNavigationDrawer"
-          onMouseExited="#hideNavigationDrawer">
-        <Pane fx:id="navButton_dashboard" layoutY="167.0" prefHeight="53.0" prefWidth="53.0"
-              onMouseEntered="#onMouseHover"
-              onMouseExited="#onMouseHover"
-              onMouseClicked="#clickMenu">
-            <ImageView fx:id="icon_dashboard" fitHeight="20.0" fitWidth="20.0" layoutX="18.0" layoutY="16.0"
+    <Pane fx:id="navigationBar"
+          prefHeight="600.0" prefWidth="53.0"
+          onMouseEntered="#drawNavigationDrawer" onMouseExited="#hideNavigationDrawer">
+        <Pane fx:id="navButton_dashboard"
+              layoutY="167.0" prefHeight="53.0" prefWidth="53.0"
+              onMouseEntered="#onMouseHover" onMouseExited="#onMouseHover" onMouseClicked="#clickMenu">
+            <ImageView fx:id="icon_dashboard"
+                       fitHeight="20.0" fitWidth="20.0" layoutX="18.0" layoutY="16.0"
                        pickOnBounds="true" preserveRatio="true">
             </ImageView>
         </Pane>
-        <Pane fx:id="navButton_profile" layoutY="220.0" prefHeight="53.0" prefWidth="53.0"
-              onMouseEntered="#onMouseHover"
-              onMouseExited="#onMouseHover"
-              onMouseClicked="#clickMenu">
-            <ImageView fx:id="icon_profile" fitHeight="20.0" fitWidth="20.0" layoutX="18.0" layoutY="16.0"
+        <Pane fx:id="navButton_profile"
+              layoutY="220.0" prefHeight="53.0" prefWidth="53.0"
+              onMouseEntered="#onMouseHover" onMouseExited="#onMouseHover" onMouseClicked="#clickMenu">
+            <ImageView fx:id="icon_profile"
+                       fitHeight="20.0" fitWidth="20.0" layoutX="18.0" layoutY="16.0"
                        pickOnBounds="true" preserveRatio="true">
             </ImageView>
         </Pane>
-        <Pane fx:id="navButton_income" layoutY="273.0" prefHeight="53.0" prefWidth="53.0"
-              onMouseEntered="#onMouseHover"
-              onMouseExited="#onMouseHover"
-              onMouseClicked="#clickMenu">
-            <ImageView fx:id="icon_income" fitHeight="20.0" fitWidth="20.0" layoutX="18.0"
-                       layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+        <Pane fx:id="navButton_income"
+              layoutY="273.0" prefHeight="53.0" prefWidth="53.0"
+              onMouseEntered="#onMouseHover" onMouseExited="#onMouseHover" onMouseClicked="#clickMenu">
+            <ImageView fx:id="icon_income"
+                       fitHeight="20.0" fitWidth="20.0" layoutX="18.0" layoutY="16.0"
+                       pickOnBounds="true" preserveRatio="true">
             </ImageView>
         </Pane>
-        <Pane fx:id="navButton_expenses" layoutY="326.0" prefHeight="53.0" prefWidth="53.0"
-              onMouseEntered="#onMouseHover"
-              onMouseExited="#onMouseHover"
-              onMouseClicked="#clickMenu">
-            <ImageView fx:id="icon_expenses" fitHeight="20.0" fitWidth="20.0" layoutX="18.0"
-                       layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+        <Pane fx:id="navButton_expenses"
+              layoutY="326.0" prefHeight="53.0" prefWidth="53.0"
+              onMouseEntered="#onMouseHover" onMouseExited="#onMouseHover" onMouseClicked="#clickMenu">
+            <ImageView fx:id="icon_expenses"
+                       fitHeight="20.0" fitWidth="20.0" layoutX="18.0" layoutY="16.0"
+                       pickOnBounds="true" preserveRatio="true">
             </ImageView>
         </Pane>
-        <Pane fx:id="navButton_analytics" layoutY="379.0" prefHeight="53.0" prefWidth="53.0"
-              onMouseEntered="#onMouseHover"
-              onMouseExited="#onMouseHover"
-              onMouseClicked="#clickMenu">
-            <ImageView fx:id="icon_analytics" fitHeight="20.0" fitWidth="20.0" layoutX="18.0"
-                       layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+        <Pane fx:id="navButton_analytics"
+              layoutY="379.0" prefHeight="53.0" prefWidth="53.0"
+              onMouseEntered="#onMouseHover" onMouseExited="#onMouseHover" onMouseClicked="#clickMenu">
+            <ImageView fx:id="icon_analytics"
+                       fitHeight="20.0" fitWidth="20.0" layoutX="18.0" layoutY="16.0"
+                       pickOnBounds="true" preserveRatio="true">
             </ImageView>
         </Pane>
     </Pane>

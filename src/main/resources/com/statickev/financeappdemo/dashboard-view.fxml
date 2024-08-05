@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashboardPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #1A120B;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.statickev.financeappdemo.View.DashboardController">
+   <children>
+      <Pane layoutX="53.0" prefHeight="600.0" prefWidth="947.0" style="-fx-background-color: #E5E5CB;">
+         <children>
+            <Label layoutX="36.0" layoutY="36.0" prefHeight="27.0" prefWidth="116.0" text=" Dashboard" textFill="#1a120b">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Line endX="-100.0" endY="31.0" layoutX="266.0" layoutY="35.0" startX="-100.0" stroke="#1a120b" strokeWidth="2.5" />
+            <Label id="label_date" layoutX="186.0" layoutY="42.0" prefHeight="16.0" prefWidth="269.0" text="Day, 00 Month 0000" textFill="#1a120b">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane fx:id="topPane" layoutX="43.0" layoutY="100.0" prefHeight="163.0" prefWidth="536.0">
+               <children>
+                  <ImageView fitHeight="163.0" fitWidth="536.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Assets/Images/Pane_bgImage_DashboardTop.png" />
+                     </image>
+                  </ImageView>
+                  <Pane prefHeight="163.0" prefWidth="333.0">
+                     <children>
+                        <ImageView fitHeight="163.0" fitWidth="333.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Assets/Images/Panel_profile.png" />
+                           </image>
+                        </ImageView>
+                        <Pane id="pane_profilePicture" layoutX="20.0" layoutY="20.0" prefHeight="123.0" prefWidth="123.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <ImageView id="imageView_profile" fitHeight="123.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Assets/Images/Image_defaultProfile.jpeg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="123.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Assets/Images/Image_profile.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="165.0" layoutY="42.0" prefHeight="80.0" prefWidth="144.0" style="-fx-background-color: #3c2a21;">
+                           <children>
+                              <Label id="label_username" layoutX="6.0" text="Username" textFill="#e5e5cb">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="39.0" layoutX="101.0" layoutY="33.0" startX="-100.0" stroke="#e5e5cb" />
+                              <Label layoutX="6.0" layoutY="44.0" text="Balance" textFill="#e5e5cb">
+                                 <font>
+                                    <Font name="Arial Bold" size="10.0" />
+                                 </font>
+                              </Label>
+                              <Label id="label_balance" layoutX="6.0" layoutY="61.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="17.0" prefWidth="123.0" text="0 cup" textFill="#e5e5cb">
+                                 <font>
+                                    <Font name="Arial Black" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Label layoutX="371.0" layoutY="26.0" text="Current Month" textFill="#1a120b">
+                     <font>
+                        <Font name="Arial Black" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="374.0" layoutY="61.0" text="Income" textFill="#1a120b">
+                     <font>
+                        <Font name="Arial Bold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="374.0" layoutY="106.0" text="Expenses" textFill="#1a120b">
+                     <font>
+                        <Font name="Arial Bold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label id="label_balance" layoutX="374.0" layoutY="76.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="17.0" prefWidth="123.0" text="0 cup" textFill="#1a120b">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label id="label_expenses" layoutX="374.0" layoutY="121.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="17.0" prefWidth="123.0" text="0 cup" textFill="#1a120b">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane layoutX="622.0" layoutY="100.0" prefHeight="163.0" prefWidth="283.0">
+               <children>
+                  <ImageView fitHeight="163.0" fitWidth="283.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Assets/Images/Pane_cupValue.png" />
+                     </image>
+                  </ImageView>
+                  <Label id="label_target" layoutX="31.0" layoutY="87.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" text="Target: 0" textFill="#1a120b">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label id="label_cupValue" layoutX="31.0" layoutY="66.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="144.0" text="Value: Rp. 0" textFill="#1a120b">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="31.0" layoutY="23.0" prefHeight="24.0" prefWidth="157.0" text="My Cup" textFill="#1a120b">
+                     <font>
+                        <Font name="Arial Black" size="16.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="31.0" layoutY="119.0" prefHeight="18.0" prefWidth="130.0" style="-fx-background-color: #E5E5CB;">
+                     <ImageView id="progressBar_fill" fitHeight="18.0" fitWidth="130.0" layoutX="-130.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                        <Image url="@../../../Assets/Images/Image_progressBarFill.png" />
+                     </ImageView>
+                     <ImageView id="progressBar_border" fitHeight="18.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../Assets/Images/Image_progressBarBorder.png" />
+                        </image>
+                     </ImageView>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

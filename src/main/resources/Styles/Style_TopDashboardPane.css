@@ -1,0 +1,5 @@
+#topPane {
+    -fx-background-color: lightblue;
+    -fx-background-image: url("/Assets/Images/Pane_bgImage_DashboardTop.png");
+    -fx-background-size: cover;
+}
