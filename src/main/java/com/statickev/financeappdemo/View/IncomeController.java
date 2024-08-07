@@ -3,7 +3,7 @@ package com.statickev.financeappdemo.View;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class ProfileViewController {
+public class IncomeController {
     @FXML
-    private Label label_date;
+    public Label label_date;
 }
