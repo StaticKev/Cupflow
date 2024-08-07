@@ -7,22 +7,22 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #1A120B;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.statickev.financeappdemo.View.ProfileViewController">
-   <children>
-      <Pane layoutX="53.0" prefHeight="600.0" prefWidth="947.0" style="-fx-background-color: #E5E5CB;">
-         <children>
-            <Label layoutX="36.0" layoutY="36.0" prefHeight="27.0" prefWidth="81.0" text=" Profile" textFill="#1a120b">
-               <font>
-                  <Font name="Arial Black" size="18.0" />
-               </font>
-            </Label>
-            <Line endX="-100.0" endY="31.0" layoutX="226.0" layoutY="34.0" startX="-100.0" stroke="#1a120b" strokeWidth="2.5" />
-            <Label id="label_date" fx:id="label_date" layoutX="146.0" layoutY="40.0" prefHeight="16.0" prefWidth="269.0" text="Day, 00 Month 0000" textFill="#1a120b">
-               <font>
-                  <Font name="Arial Bold" size="14.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
-   </children>
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #1A120B;"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.statickev.financeappdemo.View.ProfileViewController">
+   <Pane layoutX="53.0" prefHeight="600.0" prefWidth="947.0" style="-fx-background-color: #E5E5CB;">
+      <Label layoutX="36.0" layoutY="36.0" prefHeight="27.0" prefWidth="81.0" text=" Profile" textFill="#1a120b">
+         <font>
+            <Font name="Arial Black" size="18.0"/>
+         </font>
+      </Label>
+      <Line endX="-100.0" endY="31.0" layoutX="226.0" layoutY="34.0" startX="-100.0" stroke="#1a120b"
+            strokeWidth="2.5"/>
+      <Label id="label_date" fx:id="label_date" layoutX="146.0" layoutY="40.0" prefHeight="16.0" prefWidth="269.0"
+             text="Day, 00 Month 0000" textFill="#1a120b">
+         <font>
+            <Font name="Arial Bold" size="14.0"/>
+         </font>
+      </Label>
+   </Pane>
 </AnchorPane>

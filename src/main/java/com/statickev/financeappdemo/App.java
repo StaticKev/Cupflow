@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class App extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException, InterruptedException {
 //        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/statickev/financeappdemo/dashboard-view.fxml"));
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/statickev/financeappdemo/main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
