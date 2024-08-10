@@ -1,4 +1,4 @@
 package com.statickev.financeappdemo.Repository;
 
-public class CentralRepo {
+public class Repo {
 }
