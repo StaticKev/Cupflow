@@ -1,5 +1,6 @@
 package com.statickev.financeappdemo.View;
 
+import com.statickev.financeappdemo.Values.ColorPalette;
 import javafx.animation.Interpolator;
 import javafx.animation.TranslateTransition;
 import javafx.event.Event;
@@ -36,13 +37,6 @@ public class MainPaneController {
     @FXML
     public Pane navButton_dashboard, navButton_profile, navButton_income, navButton_expenses, navButton_analytics;
 
-    Map<String, String> colorPalette = Map.of(
-            "Espresso", "#1a120b",
-            "Mocha", "#3c2a21",
-            "Latte", "#d5c7a3",
-            "Cream", "#e5decb",
-            "Light Caramel", "#d4a339"
-    );
     Map<String, Boolean> menuIsOpen = new HashMap<>(Map.of(
             "dashboard", true,
             "profile", false,
@@ -54,24 +48,24 @@ public class MainPaneController {
     Map<String, Label> drawerLabels;
 
     public void initialize() {
-        mainPane.setStyle("-fx-background-color: " + colorPalette.get("Cream"));
-        navigationDrawer.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
-        navigationBar.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
-        label_dashboard.setStyle("-fx-background-color: " + colorPalette.get("Mocha"));
-        label_profile.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
-        label_income.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
-        label_expenses.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
-        label_analytics.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
-        label_dashboard.setTextFill(Color.web(colorPalette.get("Cream")));
-        label_profile.setTextFill(Color.web(colorPalette.get("Cream")));
-        label_income.setTextFill(Color.web(colorPalette.get("Cream")));
-        label_expenses.setTextFill(Color.web(colorPalette.get("Cream")));
-        label_analytics.setTextFill(Color.web(colorPalette.get("Cream")));
-        navButton_dashboard.setStyle("-fx-background-color: " + colorPalette.get("Mocha"));
-        navButton_profile.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
-        navButton_income.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
-        navButton_expenses.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
-        navButton_analytics.setStyle("-fx-background-color: " + colorPalette.get("Espresso"));
+        mainPane.setStyle("-fx-background-color: " + ColorPalette.get("Cream"));
+        navigationDrawer.setStyle("-fx-background-color: " + ColorPalette.get("Espresso"));
+        navigationBar.setStyle("-fx-background-color: " + ColorPalette.get("Espresso"));
+        label_dashboard.setStyle("-fx-background-color: " + ColorPalette.get("Mocha"));
+        label_profile.setStyle("-fx-background-color: " + ColorPalette.get("Espresso"));
+        label_income.setStyle("-fx-background-color: " + ColorPalette.get("Espresso"));
+        label_expenses.setStyle("-fx-background-color: " + ColorPalette.get("Espresso"));
+        label_analytics.setStyle("-fx-background-color: " + ColorPalette.get("Espresso"));
+        label_dashboard.setTextFill(Color.web(ColorPalette.get("Cream")));
+        label_profile.setTextFill(Color.web(ColorPalette.get("Cream")));
+        label_income.setTextFill(Color.web(ColorPalette.get("Cream")));
+        label_expenses.setTextFill(Color.web(ColorPalette.get("Cream")));
+        label_analytics.setTextFill(Color.web(ColorPalette.get("Cream")));
+        navButton_dashboard.setStyle("-fx-background-color: " + ColorPalette.get("Mocha"));
+        navButton_profile.setStyle("-fx-background-color: " + ColorPalette.get("Espresso"));
+        navButton_income.setStyle("-fx-background-color: " + ColorPalette.get("Espresso"));
+        navButton_expenses.setStyle("-fx-background-color: " + ColorPalette.get("Espresso"));
+        navButton_analytics.setStyle("-fx-background-color: " + ColorPalette.get("Espresso"));
         icon_dashboard.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Assets/Images/Icon_dashboard.png"))));
         icon_profile.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Assets/Images/Icon_profile.png"))));
         icon_income.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Assets/Images/Icon_income.png"))));
@@ -131,7 +125,7 @@ public class MainPaneController {
             for (String option : drawerButtons.keySet()) {
                 if (sender.getId().contains(option)) {
                     colorDrawerButton(
-                            colorPalette.get("Mocha"),
+                            ColorPalette.get("Mocha"),
                             drawerButtons.get(option),
                             drawerLabels.get(option)
                     );
@@ -142,7 +136,7 @@ public class MainPaneController {
             for (String option : drawerButtons.keySet()) {
                 if (sender.getId().contains(option) && !menuIsOpen.get(option)) {
                     colorDrawerButton(
-                            colorPalette.get("Espresso"),
+                            ColorPalette.get("Espresso"),
                             drawerButtons.get(option),
                             drawerLabels.get(option)
                     );
@@ -166,7 +160,7 @@ public class MainPaneController {
         for (String option : menuIsOpen.keySet()) {
             if (!menuIsOpen.get(option)) {
                 colorDrawerButton(
-                        colorPalette.get("Espresso"),
+                        ColorPalette.get("Espresso"),
                         drawerButtons.get(option),
                         drawerLabels.get(option)
                 );
